@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>IntersectionObserver & MutationObserver</title>
+        <style>
+
+            body {
+                margin: 0;
+                height: 100%;
+                width: 100%;
+                color: whitesmoke;
+                background-color: #2c3136;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+            }
+
+            button {
+                background-color: #4c545c;
+                border: none;
+                padding: 10px 20px;
+                color: white;
+                border-radius: 5px;
+                cursor: pointer;
+                margin-bottom: 15px;
+            }
+
+            .container {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-top: 50px;
+            }
+
+            .list {
+                max-height: 140px;
+                width: 120px;
+                padding: 10px;
+                color: whitesmoke;
+                background-color: #4c545c;
+                border-radius: 5px;
+                overflow: scroll;
+                overflow-x: hidden;
+                margin-bottom: 20px;
+            }
+
+            .list div {
+                padding: 15px;
+                border-bottom: 1px solid gray;
+                text-align: center;
+            }
+
+            button:hover {
+                background-color: #76838f;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="list" id="testList">
+                
+            </div>
+            <div>
+                <button id="addElementButton">Añadir elemento</button>
+                <button id="stopObservationButton">Dejar de observar</button>
+            </div>
+            <div>
+                Se han detectado <span id="mutationResults">0</span> mutations
+            </div>
+            <div id="mutation" class="mutation-container">
+    
+            </div>
+        </div>
+    </body>
+    <script src="view.js"></script>
+    <script src="../app.js"></script>
+</html>
